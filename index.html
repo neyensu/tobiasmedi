@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Argentina</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="unnamed.ico">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ENCABEZADO -->
+        <header class="header">
+
+            <button class="back-button" aria-label="Volver">
+                <span>←</span>
+            </button>
+
+            <h1>Documentos</h1>
+
+        </header>
+
+
+        <main class="content">
+
+            <!-- DOCUMENTO DNI -->
+            <section class="document-card">
+
+                <button class="document-header" id="dniButton">
+
+                    <div class="document-title">
+
+                        <div class="document-icon">
+                            <div class="person-icon"></div>
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <span>Documento Nacional de Identidad (DNI)</span>
+
+                    </div>
+
+                    <span class="arrow" id="dniArrow">⌄</span>
+
+                </button>
+
+
+                <!-- CONTENIDO QUE SE ABRE -->
+                <div class="document-content" id="dniContent">
+
+                    <div class="information">
+
+                        <div class="info-column">
+
+                            <div class="info-item">
+                                <span class="label">Documento</span>
+                                <span class="value">[Documento]</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="label">Nombre</span>
+                                <span class="value">[Nombre]</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-column">
+
+                            <div class="info-item">
+                                <span class="label">Fecha de vencimiento</span>
+                                <span class="value">23/09/2039</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="label">Apellido</span>
+                                <span class="value">[Apellido]</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <a class="demo-button" href="documento/digital.html">
+                        Ver documento digital
+                    </a>
+
+                    
+
+                </div>
+
+            </section>
+
+
+            <!-- LICENCIA -->
+            
+
+                <div class="document-content" id="licenseContent">
+
+                    <div class="license-info">
+
+                        <span class="label">Estado</span>
+                        <span class="value">Documento ficticio</span>
+
+                    </div>
+
+                    <div class="demo-warning">
+                        DEMO — Sin validez oficial
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- BARRA INFERIOR -->
+    <nav class="bottom-nav">
+
+        <a href="../digital.html" class="nav-item active">
+
+            <div class="nav-icon">⌂</div>
+
+            <span>Inicio</span>
+
+        </a>
+
+
+        <a href="#" class="nav-item">
+
+            <div class="nav-icon">▤</div>
+
+            <span>Novedades</span>
+
+        </a>
+
+
+        <a href="#" class="nav-item">
+
+            <div class="nav-icon">☎</div>
+
+            <span>Teléfonos</span>
+
+        </a>
+
+
+        <a href="#" class="nav-item">
+
+            <div class="nav-icon">☻</div>
+
+            <span>Tina</span>
+
+        </a>
+
+    </nav>
+    <script src="script.js"></script>
+
+</body>
+</html>

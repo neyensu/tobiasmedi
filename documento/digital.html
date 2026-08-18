@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Argentina</title>
+
+    <link rel="stylesheet" href="digital.css">
+        <link rel="icon" href="../unnamed.ico">
+</head>
+
+<body>
+
+    <!-- BARRA SUPERIOR -->
+    <header class="top-bar">
+
+        <a href="../index.html" class="back-button">
+            ←
+        </a>
+
+        <h1>Documento Digital</h1>
+
+        <span class="refresh">↻</span>
+
+    </header>
+
+
+    <!-- CONTENIDO -->
+    <main class="container">
+
+        <section class="document-card">
+
+            <!-- NOMBRE -->
+            <h2>[Nombre + Apellido]</h2>
+
+
+            <!-- DOCUMENTO -->
+           <div class="document-container">
+
+    <div class="document-flip" id="documentFlip">
+
+        <div class="document-face document-front">
+            <img
+                src="documento1.png"
+                alt="Documento de demostración"
+            >
+        </div>
+
+        <div class="document-face document-back">
+            <img
+                src="documento2.png"
+                alt="Documento de demostración - reverso"
+            >
+        </div>
+
+    </div>
+
+</div>
+
+
+            <!-- ACTUALIZACIÓN -->
+           <div class="update">
+
+    <div class="status-dots">
+
+        <span class="dot dot-blue"></span>
+
+        <span class="dot dot-gray"></span>
+
+    </div>
+
+    <div class="update-text">
+        Última actualización:
+        <strong>17/08/2026 16:47:29 hs</strong>
+    </div>
+
+</div>
+
+            <!-- BOTONES -->
+            <div class="buttons">
+
+
+                <!-- BOTÓN 1 -->
+                <a href="../detalle/detalle.html" class="option-button">
+
+    <span class="button-icon eye">
+        <img src="ojo.png" alt="">
+    </span>
+
+    <span>Ver detalle</span>
+
+</a>
+
+
+                <!-- BOTÓN 2 -->
+               <button type="button" class="option-button">
+
+    <span class="button-icon close">
+        <img src="cruz.png" alt="Desactivar documento">
+    </span>
+
+    <span>Desactivar documento</span>
+
+</button>
+
+
+                <!-- BOTÓN 3 -->
+             <button
+    type="button"
+    class="option-button full"
+    id="qrButton"
+>
+    <span class="button-icon qr">
+        <img src="qr-icon.png" alt="Verificación QR">
+    </span>
+
+    <span>Verifica código QR</span>
+
+    <span class="arrow">⌄</span>
+</button>
+
+
+<!-- CONTENIDO DESPLEGABLE -->
+<div class="qr-content" id="qrContent">
+
+    <div class="qr-image-container">
+
+        <img
+            src="qr.PNG"
+            class="qr-image"
+            alt="Código QR"
+        >
+
+    </div>
+
+</div>
+
+
+            <!-- DETALLE OCULTO -->
+            <div
+                class="details"
+                id="details"
+            >
+
+                <div class="detail-row">
+                    <span>Estado</span>
+                    <strong>Activo</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Tipo</span>
+                    <strong>Documento de demostración</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Identificador</span>
+                    <strong>DEMO-000000</strong>
+                </div>
+
+            </div>
+
+
+            <!-- QR / IMAGEN DE DEMOSTRACIÓN -->
+            <div
+                class="qr-content"
+                id="qrContent"
+            >
+
+                <div class="qr-placeholder">
+
+                    <span>
+                        Espacio para imagen de demostración
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="digital.js"></script>
+
+
+
+    <!-- BARRA INFERIOR -->
+<nav class="bottom-nav">
+
+    <a href="#" class="bottom-item active">
+
+        <span class="bottom-icon">⌂</span>
+
+        <span>Inicio</span>
+
+    </a>
+
+
+    <a href="#" class="bottom-item">
+
+        <span class="bottom-icon">▤</span>
+
+        <span>Novedades</span>
+
+    </a>
+
+
+    <a href="#" class="bottom-item">
+
+        <span class="bottom-icon">☎</span>
+
+        <span>Teléfonos</span>
+
+    </a>
+
+
+    <a href="#" class="bottom-item">
+
+        <span class="bottom-icon">●</span>
+
+        <span>Tina</span>
+
+    </a>
+
+</nav>
+
+</body>
+</html>

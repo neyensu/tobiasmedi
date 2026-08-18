@@ -1,0 +1,806 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f3f3f3;
+
+    color: #222;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
+
+.top-bar {
+    width: 100%;
+    height: 64px;
+
+    background: #3932bd;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+
+    gap: 25px;
+}
+
+.top-bar h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+
+    font-size: 38px;
+    line-height: 1;
+
+    font-weight: 300;
+}
+
+.refresh {
+    margin-left: auto;
+
+    font-size: 38px;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.container {
+    width: 100%;
+
+    max-width: 720px;
+
+    margin: 28px auto;
+
+    padding: 0 16px;
+}
+
+
+/* =========================
+   TARJETA
+========================= */
+
+.document-card {
+    width: 100%;
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+
+    padding-top: 30px;
+
+    margin-bottom: 200px;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+.document-card h2 {
+    font-size: 25px;
+
+    margin: 0 50px 30px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   DOCUMENTO
+========================= */
+
+.document-container {
+    width: calc(100% - 100px);
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.document-image {
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+
+
+
+/* =========================
+   BOLITAS
+========================= */
+
+.status-dots {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+
+    margin-top: 18px;
+}
+
+.dot {
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    display: block;
+
+    transition:
+        background-color 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* ESTADO NORMAL */
+
+.dot-blue {
+    background: #3932bd;
+}
+
+.dot-gray {
+    background: #999;
+}
+
+
+/* ESTADO INVERTIDO */
+
+.status-dots.inverted .dot-blue {
+    background: #999;
+}
+
+.status-dots.inverted .dot-gray {
+    background: #3932bd;
+}
+/* =========================
+   ACTUALIZACION
+========================= */
+
+
+
+.update-text {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.buttons {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid #ddd;
+}
+
+
+/* LOS 3 BOTONES */
+
+.option-button {
+    min-height: 60px;
+
+    background: white;
+
+    border: none;
+
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0 30px;
+
+    font-family: inherit;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    color: #222;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    text-decoration: none;
+    color: #222;
+}
+
+
+/* BOTON 1 */
+
+.option-button:nth-child(1) {
+    border-right: 1px solid #ddd;
+}
+
+
+/* BOTON 2 */
+
+.option-button:nth-child(2) {
+    border-right: none;
+}
+
+
+/* BOTON 3 OCUPA TODA LA FILA */
+
+.option-button.full {
+    grid-column: 1 / -1;
+
+    border-right: none;
+
+    border-bottom: none;
+
+    width: 100%;
+}
+
+
+/* =========================
+   ICONOS
+========================= */
+
+.button-icon {
+    width: 30px;
+
+    min-width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #3932bd;
+
+    font-size: 29px;
+
+    font-weight: 400;
+}
+
+.eye {
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eye img {
+   
+    height: 35px;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.close {
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close img {
+    width: 35px;
+  
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.qr {
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr img {
+    width: 35px;
+    height: 35px;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   FLECHA
+========================= */
+
+.arrow {
+    margin-left: auto;
+
+    font-size: 28px;
+
+    color: #555;
+
+    transition: transform 0.3s ease;
+}
+
+.option-button.active .arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =========================
+   DETALLES
+========================= */
+
+.details {
+    display: none;
+
+    padding: 20px 30px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.details.open {
+    display: block;
+}
+
+.detail-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 10px 0;
+
+    font-size: 14px;
+}
+
+.detail-row span {
+    color: #777;
+}
+
+.detail-row strong {
+    font-weight: 600;
+}
+
+
+/* =========================
+   QR / CONTENIDO
+========================= */
+
+.qr-content {
+    display: none;
+    padding: 30px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.qr-content.open {
+    display: block;
+}
+
+
+.qr-placeholder {
+    width: 100%;
+
+    max-width: 320px;
+
+    min-height: 250px;
+
+    margin: 0 auto;
+
+    border: 2px dashed #ddd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #999;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .top-bar {
+        height: 64px;
+
+        padding: 0 20px;
+
+        gap: 18px;
+    }
+
+    .top-bar h1 {
+        font-size: 19px;
+    }
+
+    .back-button {
+        font-size: 34px;
+    }
+
+    .refresh {
+        font-size: 34px;
+    }
+
+
+    .container {
+        margin: 16px auto;
+
+        padding: 0 12px;
+    }
+
+
+    .document-card {
+        border-radius: 12px;
+
+        padding-top: 25px;
+    }
+
+
+    .document-card h2 {
+        font-size: 21px;
+
+        margin: 0 24px 25px;
+    }
+
+
+    .document-container {
+        width: calc(100% - 36px);
+    }
+
+
+    .update {
+        font-size: 12px;
+
+        padding: 22px 10px;
+    }
+
+
+    .option-button {
+        min-height: 70px;
+
+        padding: 0 20px;
+
+        gap: 10px;
+
+        font-size: 15px;
+    }
+
+
+    .button-icon {
+        width: 27px;
+
+        min-width: 27px;
+
+        font-size: 25px;
+    }
+
+}
+
+/* =========================
+   VERIFICACIÓN QR
+========================= */
+
+/* =========================
+   QR DESPLEGABLE
+========================= */
+
+/* =========================
+   CONTENIDO QR
+========================= */
+
+.qr-content {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    height: 0;
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    padding: 0;
+
+    margin: 0;
+
+    border: none;
+
+    transition:
+        height 0.4s ease,
+        opacity 0.3s ease,
+        padding 0.4s ease;
+}
+
+
+/* QR ABIERTO */
+
+.qr-content.open {
+    height: 360px;
+    max-height: 360px;
+
+    opacity: 1;
+
+    padding: 25px 20px;
+
+    border-top: 1px solid #ddd;
+}
+
+
+/* =========================
+   CONTENEDOR DEL QR
+========================= */
+
+.qr-image-container {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   IMAGEN QR
+========================= */
+
+.qr-image {
+    display: block;
+
+    width: 280px;
+    height: 280px;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+    margin: 0 auto;
+}
+/* =========================
+   DOCUMENTO GIRATORIO
+========================= */
+
+.document-container {
+    width: calc(100% - 100px);
+
+    margin: 0 auto;
+
+    perspective: 1200px;
+}
+
+
+/* CONTENEDOR QUE GIRA */
+
+.document-flip {
+    width: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition: transform 0.7s ease;
+
+    cursor: pointer;
+}
+
+
+/* CUANDO GIRA */
+
+.document-flip.flipped {
+    transform: rotateY(180deg);
+}
+
+
+/* CARAS */
+
+.document-face {
+    width: 100%;
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+}
+
+
+/* IMÁGENES */
+
+.document-face img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* PARTE TRASERA */
+
+.document-back {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+/* =========================
+   BARRA INFERIOR
+========================= */
+
+.bottom-nav {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 88px;
+
+    background: white;
+
+    border-top: 1px solid #ddd;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    z-index: 1000;
+}
+
+
+.bottom-item {
+    text-decoration: none;
+
+    color: #888;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    font-size: 16px;
+
+    font-weight: 400;
+}
+
+
+.bottom-item.active {
+    color: #3932bd;
+
+    font-weight: 600;
+}
+
+
+.bottom-icon {
+    font-size: 31px;
+
+    line-height: 1;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   ESPACIO PARA LA BARRA
+========================= */
+
+body {
+    padding-bottom: 88px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .bottom-nav {
+        height: 88px;
+    }
+
+    .bottom-item {
+        font-size: 15px;
+    }
+
+    .bottom-icon {
+        font-size: 29px;
+    }
+
+    body {
+        padding-bottom: 88px;
+    }
+
+}

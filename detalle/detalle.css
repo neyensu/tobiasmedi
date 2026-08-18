@@ -1,0 +1,563 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f3f3f3;
+
+    color: #333;
+
+    overflow-x: hidden;
+
+    padding-bottom: 82px;
+}
+
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
+
+.top-bar {
+    width: 100%;
+    height: 64px;
+
+    background: #3932bd;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+
+    gap: 25px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+.top-bar h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.back-button {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    font-weight: 300;
+}
+
+.refresh-button {
+    margin-left: auto;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
+.page {
+    width: 100%;
+
+    max-width: 720px;
+
+    margin: 28px auto;
+
+    padding: 0 16px;
+}
+
+
+/* =========================
+   TARJETA
+========================= */
+
+.detail-card {
+    width: 100%;
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   FOTO CIRCULAR
+========================= */
+
+.profile-container {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding-top: 38px;
+
+    padding-bottom: 34px;
+}
+
+.profile-image {
+    width: 150px;
+
+    height: 150px;
+
+    max-width: 40vw;
+    max-height: 40vw;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+
+/* =========================
+   CÓDIGO DE BARRAS
+========================= */
+
+.barcode-container {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 15px 20px 38px;
+}
+
+.barcode-image {
+    display: block;
+
+    width: min(280px, 80%);
+
+    height: auto;
+
+    max-width: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   DATOS PRINCIPALES
+========================= */
+
+.main-data {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 50px;
+
+    row-gap: 28px;
+
+    padding: 0 48px 38px;
+}
+
+.data-item {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.data-item span {
+    color: #747b84;
+
+    font-size: 22px;
+
+    line-height: 1.25;
+}
+
+.data-item strong {
+    color: #333;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   SEPARADOR
+========================= */
+
+.separator {
+    width: 100%;
+
+    height: 1px;
+
+    background: #d5d5d5;
+}
+
+
+/* =========================
+   DATOS PERSONALES
+========================= */
+
+.personal-data {
+    width: 100%;
+
+    padding: 40px 48px 50px;
+}
+
+.personal-item {
+    width: 100%;
+
+    margin-bottom: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.personal-item:last-child {
+    margin-bottom: 0;
+}
+
+.personal-item span {
+    color: #747b84;
+
+    font-size: 22px;
+
+    line-height: 1.25;
+}
+
+.personal-item strong {
+    color: #333;
+
+    font-size: 30px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   BARRA INFERIOR
+========================= */
+
+.bottom-nav {
+    position: fixed;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 78px;
+
+    background: white;
+
+    border-top: 1px solid #ddd;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    z-index: 200;
+}
+
+.nav-item {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 3px;
+
+    text-decoration: none;
+
+    color: #888;
+
+    font-size: 16px;
+}
+
+.nav-icon {
+    font-size: 29px;
+
+    line-height: 1;
+}
+
+.nav-item.active {
+    color: #3932bd;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+
+    .page {
+        margin: 18px auto;
+
+        padding: 0 12px;
+    }
+
+    .main-data {
+        column-gap: 25px;
+
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .personal-data {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 520px) {
+
+    body {
+        padding-bottom: 74px;
+    }
+
+
+    /* BARRA */
+
+    .top-bar {
+        height: 64px;
+
+        padding: 0 20px;
+
+        gap: 18px;
+    }
+
+    .top-bar h1 {
+        font-size: 20px;
+    }
+
+    .back-button {
+        font-size: 36px;
+    }
+
+    .refresh-button {
+        font-size: 36px;
+    }
+
+
+    /* TARJETA */
+
+    .page {
+        margin: 16px auto;
+
+        padding: 0 10px;
+    }
+
+    .detail-card {
+        border-radius: 12px;
+    }
+
+
+    /* FOTO */
+
+    .profile-container {
+        padding-top: 32px;
+
+        padding-bottom: 28px;
+    }
+
+    .profile-image {
+        width: 130px;
+        height: 130px;
+
+        max-width: 45vw;
+        max-height: 45vw;
+    }
+
+
+    /* BARRAS */
+
+    .barcode-container {
+        padding: 12px 50px 32px;
+    }
+
+    .barcode-image {
+        width: min(280px, 85%);
+    }
+
+
+    /* DATOS PRINCIPALES */
+
+    .main-data {
+        grid-template-columns: 1fr 1fr;
+
+        column-gap: 18px;
+
+        row-gap: 24px;
+
+        padding: 0 24px 32px;
+    }
+
+    .data-item {
+        min-width: 0;
+    }
+
+    .data-item span {
+        font-size: 17px;
+    }
+
+    .data-item strong {
+        font-size: 24px;
+    }
+
+
+    /* DATOS PERSONALES */
+
+    .personal-data {
+        padding: 32px 24px 40px;
+    }
+
+    .personal-item {
+        margin-bottom: 25px;
+    }
+
+    .personal-item span {
+        font-size: 18px;
+    }
+
+    .personal-item strong {
+        font-size: 24px;
+    }
+
+
+    /* NAV */
+
+    .bottom-nav {
+        height: 74px;
+    }
+
+    .nav-item {
+        font-size: 13px;
+    }
+
+    .nav-icon {
+        font-size: 24px;
+    }
+
+}
+
+
+/* =========================
+   CELULARES MUY PEQUEÑOS
+========================= */
+
+@media (max-width: 360px) {
+
+    .top-bar {
+        padding: 0 14px;
+
+        gap: 12px;
+    }
+
+    .top-bar h1 {
+        font-size: 18px;
+    }
+
+
+    .profile-image {
+        width: 115px;
+        height: 115px;
+    }
+
+
+    .main-data {
+        column-gap: 12px;
+
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .data-item span {
+        font-size: 15px;
+    }
+
+    .data-item strong {
+        font-size: 20px;
+    }
+
+
+    .personal-data {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .personal-item span {
+        font-size: 17px;
+    }
+
+    .personal-item strong {
+        font-size: 21px;
+    }
+
+}
