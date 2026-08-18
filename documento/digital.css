@@ -711,67 +711,57 @@ body {
 .bottom-nav {
     position: fixed;
 
-    bottom: 0;
     left: 0;
+    bottom: 0;
 
     width: 100%;
-    height: 88px;
+    height: 78px;
 
     background: white;
 
     border-top: 1px solid #ddd;
 
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
 
-    z-index: 1000;
+    z-index: 200;
 }
 
+.nav-item {
+    min-width: 0;
 
-.bottom-item {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 4px;
+
     text-decoration: none;
 
     color: #888;
 
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 5px;
-
     font-size: 16px;
-
-    font-weight: 400;
 }
 
+.nav-item img {
+    width: 30px;
+    height: 30px;
 
-.bottom-item.active {
+    object-fit: contain;
+
+    display: block;
+}
+
+.nav-item span {
+    line-height: 1;
+}
+
+.nav-item.active {
     color: #3932bd;
-
     font-weight: 600;
 }
-
-
-.bottom-icon {
-    font-size: 31px;
-
-    line-height: 1;
-
-    height: 34px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-
 /* =========================
    ESPACIO PARA LA BARRA
 ========================= */
